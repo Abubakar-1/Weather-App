@@ -18,16 +18,16 @@ form.addEventListener("submit", (e) => {
     const filteredArray = listItemsArray.filter((el) => {
       let content = "";
       if (inputVal.includes(",")) {
-        if (inputVal.split(","[1].length > 2)) {
-          inputVal = inputVal.split(","[0]);
+        if (inputVal.split(",")[1].length > 2) {
+          inputVal = inputVal.split(",")[0];
           content = el.querySelector("#name").textContent.toLowerCase();
         } else {
-          content = el.queryselector("#city").dataset.name.toLowerCase();
+          content = el.querySelector("#city").dataset.name.toLowerCase();
         }
       } else {
         content = el.querySelector("#name").textContent.toLowerCase();
       }
-      return content === inputVal.toLocaleLowerCase();
+      return content == inputVal.toLowerCase();
     });
 
     if (filteredArray.length > 0) {
