@@ -51,7 +51,7 @@ form.addEventListener("submit", (e) => {
       const cities = document.createElement("div");
       cities.setAttribute("id", "cities");
       const city = `
-           <div id="city"><span id='name'>${name}, ${sys.country}</span></div><br>
+           <div id="city" data-name="${name},${sys.country}"><span id='name'>${name}, ${sys.country}</span></div><br>
            <div id='temp'>
             <span>${Math.round(main.temp)}
                 <sup>°C</sup>
